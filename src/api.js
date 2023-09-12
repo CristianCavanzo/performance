@@ -22,6 +22,7 @@ const request = (endpoint = '') =>
     .then(checkStatus)
     .then(toJson)
     .then(extractData)
+    .catch(e => console.log(e))
 
 export const fetchPopular = (limit = PER_PAGE) =>
   request(`/anime?page[limit]=${limit}&sort=-user_count`)
