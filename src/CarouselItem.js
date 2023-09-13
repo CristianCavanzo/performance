@@ -48,9 +48,15 @@ const CarouselItem = ({
     h(
       'div',
       Controls({ slug, youtubeVideoId }),
-      h('p', title),
-      h('p', subtitle),
-      h('p', `Released: ${relativeDate(startDate)}`)
+      h('p', { class: 'carousel-item__title' }, title),
+      h('p', { class: 'carousel-item__subtitle' }, subtitle),
+      h(
+        'p',
+        {
+          class: 'carousel-item__date',
+        },
+        `Released: ${relativeDate(startDate)}`
+      )
     )
   )
 
