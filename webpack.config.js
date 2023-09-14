@@ -1,18 +1,21 @@
-const webpack = require('webpack')
 const path = require('path')
 
-const nodeEnv = process.env.NODE_ENV || 'development'
-
 const config = {
-  mode: nodeEnv,
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   devServer: {
     contentBase: '.',
+  },
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 }
 

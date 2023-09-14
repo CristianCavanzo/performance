@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://kitsu.io" crossorigin />
     <link rel="dns-prefetch" href="https://kitsu.io" />
+    <link rel="preconnect" href="https://unpkg.com/" crossorigin />
+    <link rel="dns-prefetch" href="https://unpkg.com/" />
     <!-- Styles -->
     <link rel="stylesheet" href="/styles.css" />
     <link
@@ -83,5 +84,6 @@
   </body>
   <!-- Scripts -->
   <script defer src="https://unpkg.com/unfetch/polyfill"></script>
-  <script defer src="dist/bundle.js"></script>
+  <script defer src="dist/vendors~main.js"></script>
+  <script defer src="dist/main.js"></script>
 </html>
