@@ -11,6 +11,14 @@ const config = {
     publicPath: '/dist',
     filename: '[name].js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   devServer: {
     contentBase: '.',
   },

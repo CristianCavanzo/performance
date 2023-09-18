@@ -22,18 +22,21 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^5.2.6",
     "husky": "^4.2.3",
     "hyperscript": "^2.0.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "prettier": "1.19.1",
     "pretty-quick": "^2.0.1",
-    "webpack": "^4.47.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.9.1",
-    "webpack-cli": "^3.3.12",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
+    "modal-video": "^2.4.8",
     "serve": "^14.2.1"
   }
 }
