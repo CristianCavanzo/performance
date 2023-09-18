@@ -7,15 +7,19 @@ const config = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    clean: true,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   devServer: {
     contentBase: '.',
   },
   plugins: [new BundleAnalyzerPlugin()],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 }
 
 module.exports = config

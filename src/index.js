@@ -1,7 +1,7 @@
 import h from 'hyperscript'
 import { fetchPopular, fetchHighestRated, fetchTrending } from './api'
 import CarouselItem from './CarouselItem'
-
+import { modalListener } from './modal'
 const SectionTitle = title => h('h3.carousel-title', title)
 
 const Carousel = ({ itemsList = [] }) =>
@@ -24,7 +24,6 @@ const Carousel = ({ itemsList = [] }) =>
       )
     )
   )
-
 window.addEventListener('DOMContentLoaded', async () => {
   const mountReference = document.querySelector('.main').lastElementChild
 
@@ -58,4 +57,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         itemsList: popular,
       })
     )
+  document.body.addEventListener('click', event => {
+    if (event.target.classList.contains('carousel-item__play')) {
+      modalListener(event)
+    }
+    return false
+  })
 })

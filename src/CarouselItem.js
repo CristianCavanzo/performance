@@ -36,10 +36,12 @@ const Controls = ({ slug, youtubeVideoId }) =>
         title: 'Watch trailer',
         target: '_blank',
         rel: 'noreferrer',
+        'data-videoId': youtubeVideoId,
       },
       h('img', {
         src: 'assets/play-icon.png',
         alt: 'Play',
+        className: 'carousel-item__play',
       })
     ),
     h(
