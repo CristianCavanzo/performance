@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.cjs",
     "serve": "serve . -p 3000",
-    "build:node": "npm run build; node export.js ; nodemon ./ssr/index.js"
+    "build:node": "npm run build; node export.js"
   },
   "prettier": {
     "trailingComma": "es5",
