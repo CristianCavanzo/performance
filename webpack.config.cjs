@@ -1,12 +1,11 @@
 const webpack = require('webpack')
 const path = require('path')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
 
 const config = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   output: {
+    clean: true,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
     filename: '[name].js',
@@ -18,9 +17,6 @@ const config = {
         use: ['style-loader', 'css-loader'],
       },
     ],
-  },
-  devServer: {
-    contentBase: '.',
   },
   optimization: {
     splitChunks: {

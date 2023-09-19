@@ -1,5 +1,5 @@
 import lozad from 'lozad'
-import modalListener from './modal'
+import { modalListener } from './modal/index.js'
 
 !(function(document) {
   // Add lazy loading

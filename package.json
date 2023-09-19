@@ -7,9 +7,9 @@
   "scripts": {
     "start": "npm run build; npm run serve",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.cjs",
     "serve": "serve . -p 3000",
-    "start:node": "nodemon ./ssr/index.js"
+    "start:node": "npm run build; nodemon ./ssr/index.js"
   },
   "prettier": {
     "trailingComma": "es5",
