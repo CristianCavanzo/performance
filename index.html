@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://unpkg.com/" crossorigin />
     <link rel="dns-prefetch" href="https://unpkg.com/" />
     <!-- Styles -->
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="public/styles.css" />
     <link
       rel="stylesheet"
-      href="/desktop.css"
+      href="public/desktop.css"
       media="screen and (min-width: 600px)"
     />
     <!-- Title -->
@@ -22,7 +22,11 @@
   <body>
     <header class="header">
       <div>
-        <img class="logo" src="/assets/logo-platzi-video.png" alt="logo" />
+        <img
+          class="logo"
+          src="public/assets/logo-platzi-video.png"
+          alt="logo"
+        />
       </div>
       <div class="menu">
         <div>
@@ -59,6 +63,7 @@
     <section class="main">
       <h2>¿Qué quieres ver hoy?</h2>
       <input type="text" class="search-input" placeholder="Buscar..." />
+      <div id="ssr-placeholder"></div>
     </section>
 
     <footer>

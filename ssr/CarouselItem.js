@@ -1,4 +1,5 @@
 import h from 'hyperscript'
+
 const relativeDate = dateStr => {
   const date = new Date(dateStr)
   const now = new Date()
@@ -39,7 +40,7 @@ const Controls = ({ slug, youtubeVideoId }) =>
         'data-videoId': youtubeVideoId,
       },
       h('img', {
-        src: 'assets/play-icon.png',
+        src: 'public/assets/play-icon.png',
         alt: 'Play',
         className: 'carousel-item__play',
       })
@@ -53,7 +54,7 @@ const Controls = ({ slug, youtubeVideoId }) =>
         rel: 'noreferrer',
       },
       h('img', {
-        src: 'assets/plus-icon.png',
+        src: 'public/assets/plus-icon.png',
         alt: 'More info',
       })
     )
