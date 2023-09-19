@@ -5,7 +5,6 @@ const config = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    clean: true,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist',
     filename: '[name].js',
