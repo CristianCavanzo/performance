@@ -91,4 +91,11 @@
   <script defer src="https://unpkg.com/unfetch/polyfill"></script>
   <script defer src="dist/vendors~main.js"></script>
   <script defer src="dist/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+      })
+    }
+  </script>
 </html>
